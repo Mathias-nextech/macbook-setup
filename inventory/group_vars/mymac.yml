@@ -27,14 +27,15 @@ homebrew:
     - gnutls
     - gnu-tar
     - grep
+    - imagemagick
     # - jq
+    - htop
+    - keychain
     # - kubectl
     # - kubectx
     # - kubeseal
-    - imagemagick
-    - htop
-    - keychain
     - lsd
+    - mamp
     - python
     - rbenv
     # - tfenv
@@ -452,8 +453,8 @@ others:
     - { name: Disable auto mount for read write devices, domain: com.apple.frameworks.diskimages, key: auto-open-rw-root, type: bool, value: false }
     # Crash reporter
     - { name: Disable Crash Reporter, domain: com.apple.CrashReporter, key: DialogType, type: string, value: none }
-    # Firewall
-    - { name: Enable Firewall, domain: com.apple.security.firewall, key: EnableFirewall , type: bool, value: true }
+    # Firewall (not working for now)
+    # - { name: Enable Firewall, domain: com.apple.alf, key: globalstate , type: int, value: 1 }
 
   # Night Shift schedule
   nightshift:
