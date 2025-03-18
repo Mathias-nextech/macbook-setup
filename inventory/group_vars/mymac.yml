@@ -1,9 +1,9 @@
 ##
 # Commons
 ##
-username: axinorm
+username: mathias
 group: staff
-hostname: mymac
+hostname: Ganesha
 
 ##
 # Homebrew
@@ -17,7 +17,7 @@ homebrew:
     - bat
     - coreutils
     - direnv
-    - dockutil
+    # - dockutil
     - findutils
     - fzf
     - gawk
@@ -27,21 +27,48 @@ homebrew:
     - gnutls
     - gnu-tar
     - grep
-    - jq
-    - kubectl
-    - kubectx
-    - kubeseal
+    # - jq
+    # - kubectl
+    # - kubectx
+    # - kubeseal
+    - imagemagick
+    - htop
+    - keychain
     - lsd
     - python
-    - tfenv
-    - tflint
-    - watch
+    - rbenv
+    # - tfenv
+    # - tflint
+    # - watch
     - wget
-    - yq
+    # - yq
+    - yarn
 
   casks:
     - firefox
-    - iina
+    - postman
+    - transmit
+    - alfred
+    - anydesk
+    - ganttproject
+    - 1password
+    - openvpn-connect
+    - datagrip
+    - malwarebytes
+    - textmate
+    - cursor
+    - transmit
+    - istat-menus
+    - dropbox
+    - iterm2
+    - teamviewer
+    - rectangle
+    - sitesucker-pro
+    - podman-desktop
+    - anydesk
+    # - chrome
+    - chromedriver
+    - virtualbox@beta
     - vscodium
 
 ##
@@ -61,8 +88,8 @@ rosetta:
 ##
 git:
   enabled: true
-  username: axinorm
-  email: my-email@example.com
+  username: mathias
+  email: mathias@organicweb.fr
   files: []
 
 ##
@@ -76,12 +103,17 @@ powerlevel10k:
     url: https://github.com/romkatv/powerlevel10k.git
     version: v1.20.0
 
+spaceship:
+  theme:
+    url: https://github.com/spaceship-prompt/spaceship-prompt.git
+    version: v4.17.0
+
 ##
 # Tmux
 ##
-tmux:
-  plugins:
-    - { name: "tpm", repo: "https://github.com/tmux-plugins/tpm.git", version: "v3.1.0" }
+# tmux:
+#  plugins:
+#    - { name: "tpm", repo: "https://github.com/tmux-plugins/tpm.git", version: "v3.1.0" }
 
 ##
 # SSH
@@ -95,8 +127,43 @@ ssh:
 ##
 vscodium:
   extensions:
-    - { name: "Terraform", id: "hashicorp.terraform" }
-    - { name: "HCL", id: "hashicorp.hcl" }
+    # - { name: "Terraform", id: "hashicorp.terraform" }
+    # - { name: "HCL", id: "hashicorp.hcl" }
+    - { name: "Markdown Preview Enhanced", id: "shd101wyy.markdown-preview-enhanced" }
+    - { name: "Auto Close Tag", id: "formulahendry.auto-close-tag" }
+    - { name: "Better Comments", id: "aaron-bond.better-comments" }
+    - { name: "Better Haml", id: "karunamurti.haml" }
+    - { name: "DotENV", id: "mikestead.dotenv" }
+    - { name: "EditorConfig for VS Code", id: "editorconfig.editorconfig" }
+    - { name: "ESLint", id: "dbaeumer.vscode-eslint" }
+    - { name: "French Language Pack for Visual Studio Code", id: "ms-ceintl.vscode-language-pack-fr" }
+    - { name: "Git Graph", id: "mhutchie.git-graph" }
+    - { name: "GitHub Actions", id: "github.vscode-github-actions" }
+    # - { name: "GitHub Copilot", id: "github.copilot" }
+    - { name: "GitLab Workflow", id: "gitlab.gitlab-workflow" }
+    - { name: "GitLens", id: "eamodio.gitlens" }
+    # - { name: "Haml Lint", id: "aki77.haml-lint" }
+    - { name: "Indent Rainbow", id: "oderwat.indent-rainbow" }
+    - { name: "IntelliPHP - AI Autocomplete for PHP", id: "devsense.intelli-php-vscode" }
+    - { name: "PHP", id: "devsense.phptools-vscode" }
+    - { name: "Live Server", id: "ritwickdey.liveserver" }
+    - { name: "Npm Intellisense", id: "christian-kohler.npm-intellisense" }
+    - { name: "Path Intellisense", id: "christian-kohler.path-intellisense" }
+    - { name: "PHP Intelephense", id: "bmewburn.vscode-intelephense-client" }
+    - { name: "PHP IntelliSense", id: "felixfbecker.php-intellisense" }
+    - { name: "PHP Namespace Resolver", id: "mehedidracula.php-namespace-resolver" }
+    - { name: "PHP Profiler", id: "devsense.profiler-php-vscode" }
+    - { name: "Prettier - Code formatter", id: "esbenp.prettier-vscode" }
+    - { name: "Procfile", id: "benspaulding.procfile" }
+    - { name: "Rails DB Schema", id: "aki77.rails-db-schema" }
+    - { name: "RuboCop", id: "rubocop.vscode-rubocop" }
+    - { name: "Ruby", id: "rebornix.ruby" }
+    - { name: "Ruby LSP", id: "shopify.ruby-lsp" }
+    # - { name: "Ruby in Rails", id: "hridoy.rails-snippets" }
+    # - { name: "Salty", id: "saltchang.salty" }
+    - { name: "Sass (.sass only)", id: "syler.sass-indented" }
+    - { name: "SCSS Everywhere", id: "gencer.html-slim-scss-css-class-completion" }
+    - { name: "VSCode Ruby", id: "wingrunr21.vscode-ruby" }
     - { name: "Ansible", id: "redhat.ansible" }
 
 ##
@@ -105,8 +172,8 @@ vscodium:
 settings:
   defaults:
     # Set languages and locale
-    - { name: Set languages, key: AppleLanguages, type: array, value: ["en-CH", "fr-CH"] }
-    - { name: Set locale, key: AppleLocale, type: string, value: en_CH }
+    - { name: Set languages, key: AppleLanguages, type: array, value: ["en-US", "fr-FR"] }
+    - { name: Set locale, key: AppleLocale, type: string, value: fr_FR }
     - { name: Set units 1/2, key: AppleMeasurementUnits, type: string, value: Centimeters }
     - { name: Set units 2/2, key: AppleMetricUnits, type: bool, value: true }
     # Disable automatic writing modes
@@ -171,7 +238,7 @@ dock:
     - { name: Don't automatically rearrange Spaces based on most recent use, key: mru-spaces, type: bool, value: false }
     - { name: Automatically hide and show the Dock, key: autohide, type: bool, value: true }
     - { name: Don't show recent applications in Dock, key: show-recents, type: bool, value: false }
-    - { name: Orientation left, key: orientation, type: string, value: left }
+    - { name: Orientation bottom, key: orientation, type: string, value: bottom }
     - { name: Set size of icons, key: tilesize, type: integer, value: 33 }
     - { name: Hot corners - Top left corner 1/2, key: wvous-tl-corner, type: int, value: 0 }
     - { name: Hot corners - Top left corner 2/2, key: wvous-tl-modifier, type: int, value: 0 }
@@ -187,15 +254,17 @@ dock:
   # Set applications in Dock
   display_applications:
     - /System/Applications/Launchpad.app
+    - /Applications/Mail.app
+    - /System/Applications/Calendar.app
     - /Applications/Firefox.app
+    - /Applications/Safari.app
+    - /Applications/Music.app
     - /Applications/iTerm.app
     - /Applications/VSCodium.app
+    - /Applications/Cursor.app
+    - /Applications/DataGrip.app
+    - "\"/Applications/PodMan Desktop.app\""
     - /System/Applications/Messages.app
-    - /System/Applications/Calendar.app
-    - /System/Applications/Reminders.app
-    - /System/Applications/Notes.app
-    - /Applications/IINA.app
-    - "\"/System/Applications/App Store.app\""
     - "\"/System/Applications/System Settings.app\""
 
   # Reset Launchpad
@@ -206,19 +275,19 @@ dock:
 ##
 finder:
   defaults:
-    - { name: Allow quitting via ⌘ + Q; doing so will also hide desktop icons, key: QuitMenuItem, type: bool, value: true }
+    # - { name: Allow quitting via ⌘ + Q; doing so will also hide desktop icons, key: QuitMenuItem, type: bool, value: true }
     - { name: Show hidden files, key: AppleShowAllFiles, type: bool, value: true }
     - { name: Show status bar, key: ShowStatusBar, type: bool, value: true }
-    - { name: Show path bar, key: ShowPathbar, type: bool, value: true }
+    - { name: Don't show path bar, key: ShowPathbar, type: bool, value: false }
     - { name: Use list view in all Finder windows by default, key: FXPreferredViewStyle, type: string, value: Nlsv }
-    - { name: Keep folders on top when sorting by name, key: _FXSortFoldersFirst, type: bool, value: true }
-    - { name: When performing a search, search the current folder by default, key: FXDefaultSearchScope, type: string, value: SCcf }
+    - { name: don't keep folders on top when sorting by name, key: _FXSortFoldersFirst, type: bool, value: false }
+    # - { name: When performing a search, search the current folder by default, key: FXDefaultSearchScope, type: string, value: SCcf }
     - { name: Disable the warning when changing a file extension, key: FXEnableExtensionChangeWarning, type: bool, value: false }
     - { name: Disable disable Recent Tags, key: ShowRecentTags, type: bool, value: false }
-    - { name: Don't show icon for external hard drives, key: ShowExternalHardDrivesOnDesktop, type: bool, value: false }
-    - { name: Don't show icon for hard drives, key: ShowHardDrivesOnDesktop, type: bool, value: false }
-    - { name: Don't show icon for mounted servers, key: ShowMountedServersOnDesktop, type: bool, value: false }
-    - { name: Don't show icon for removable media, key: ShowRemovableMediaOnDesktop, type: bool, value: false }
+    # - { name: Don't show icon for external hard drives, key: ShowExternalHardDrivesOnDesktop, type: bool, value: false }
+    # - { name: Don't show icon for hard drives, key: ShowHardDrivesOnDesktop, type: bool, value: false }
+    # - { name: Don't show icon for mounted servers, key: ShowMountedServersOnDesktop, type: bool, value: false }
+    # - { name: Don't show icon for removable media, key: ShowRemovableMediaOnDesktop, type: bool, value: false }
     - { name: Display full POSIX path in window title, key: _FXShowPosixPathInTitle, type: bool, value: true }
     - { name: Don't open a new windows for removable disk, key: OpenWindowForNewRemovableDisk, type: bool, value: false }
     - { name: Enable the warning before emptying the Trash, key: WarnOnEmptyTrash, type: bool, value: true }
@@ -231,7 +300,7 @@ finder:
     - /Volumes
 
   # Remove default tags
-  remove_tags: true
+  remove_tags: false
 
 ##
 # iTerm2 settings
@@ -253,16 +322,16 @@ safari:
     - { name: Disable auto fill passwords, key: AutoFillPasswords, type: bool, value: false }
     - { name: Don't open downloads automatically, key: AutoOpenSafeDownloads, type: bool, value: false }
     - { name: Change the Safari search to find strings contained in other words, key: FindOnPageMatchesWordStartsOnly, type: bool, value: false }
-    - { name: Auto clear downloads, key: DownloadsClearingPolicy, type: int, value: 2 }
+    # - { name: Auto clear downloads, key: DownloadsClearingPolicy, type: int, value: 2 }
     - { name: Show developer tools, key: ShowDevelopMenu, type: bool, value: true }
     - { name: Show full URL in Safari, key: ShowFullURLInSmartSearchField, type: bool, value: true }
     - { name: Show status bar, key: ShowStatusBar, type: bool, value: true }
     - { name: Show overlay status bar, key: ShowOverlayStatusBar, type: bool, value: true }
     - { name: Show status bar in full screen, key: ShowStatusBarInFullScreen, type: bool, value: true }
-    - { name: Set Duckduckgo as a search engine, key: SearchProviderIdentifier, type: string, value: "com.duckduckgo" }
+    # - { name: Set Duckduckgo as a search engine, key: SearchProviderIdentifier, type: string, value: "com.duckduckgo" }
     # 0: Homepage, 1: Empty Page, 2: Same Page, 4: Start Page
-    - { name: Setup new window behaviour, key: NewTabBehavior, type: int, value: 4 }
-    - { name: Setup new tab behaviour, key: NewWindowBehavior, type: int, value: 4 }
+    - { name: Setup new window behaviour, key: NewTabBehavior, type: int, value: 1 }
+    - { name: Setup new tab behaviour, key: NewWindowBehavior, type: int, value: 1 }
     # 6 top sites: 0, 12 top sites: 1, 24 top sites: 2
     - { name: Setup top sites grid arrangement, key: TopSitesGridArrangement, type: int, value: 0 }
     # 0: Never, 1: Automatically, 2: Always
@@ -303,12 +372,11 @@ textedit:
 ##
 
 network_configuration:
-  - interface_name: Ethernet
+  - interface_name: Realtek\ LAN
     dns_servers:
-      - 9.9.9.9
-      - 149.112.112.112
-      - 2620:fe::fe
-      - 2620:fe::9
+      - 10.0.0.250
+      # - 2620:fe::fe
+      # - 2620:fe::9
 
 ##
 # Siri
@@ -334,20 +402,20 @@ others:
     - { name: Avoid creating .DS_Store files on network, domain: com.apple.desktopservices, key: DSDontWriteNetworkStores, type: bool, value: true }
     - { name: Avoid creating .DS_Store files on USB volumes, domain: com.apple.desktopservices, key: DSDontWriteUSBStores, type: bool, value: true }
     # Setup controlcenter : 18 = on, 24 = off
-    - { name: Show Bluetooth, domain: com.apple.controlcenter, key: Bluetooth, type: int, value: 18 }
+    - { name: Show Bluetooth, domain: com.apple.controlcenter, key: Bluetooth, type: int, value: 24 }
     - { name: Show Battery, domain: com.apple.controlcenter, key: Battery, type: int, value: 18 }
     - { name: Show Clock, domain: com.apple.controlcenter, key: Clock, type: int, value: 18 }
-    - { name: Show Focus modes, domain: com.apple.controlcenter, key: FocusModes, type: int, value: 18 }
-    - { name: Show Screen mirroring, domain: com.apple.controlcenter, key: ScreenMirroring, type: int, value: 18 }
+    - { name: Show Focus modes, domain: com.apple.controlcenter, key: FocusModes, type: int, value: 24 }
+    - { name: Show Screen mirroring, domain: com.apple.controlcenter, key: ScreenMirroring, type: int, value: 24 }
     - { name: Show Sound, domain: com.apple.controlcenter, key: Sound, type: int, value: 18 }
-    - { name: Show WiFi, domain: com.apple.controlcenter, key: WiFi, type: int, value: 18 }
-    - { name: Don't show Now Playing, domain: com.apple.controlcenter, key: NowPlaying, type: int, value: 24 }
+    - { name: Show WiFi, domain: com.apple.controlcenter, key: WiFi, type: int, value: 24 }
+    - { name: Show Now Playing, domain: com.apple.controlcenter, key: NowPlaying, type: int, value: 18 }
     # Battery
-    - { name: Show battery percentage, domain: com.apple.menuextra.battery, key: ShowPercent, type: bool, value: true }
+    - { name: Show battery percentage, domain: com.apple.menuextra.battery, key: ShowPercent, type: bool, value: false }
     # Screensaver
     - { name: Require password after sleep or screen saver begins, domain: com.apple.screensaver, key: askForPassword, type: int, value: 1 }
-    - { name: Require password immediately after sleep or screen saver begins, domain: com.apple.screensaver, key: askForPasswordDelay, type: int, value: 0 }
-    - { name: Start screen saver after 5 minutes, host: currentHost, domain: com.apple.screensaver, key: idleTime, type: int, value: 300 }
+    - { name: Require password immediately after sleep or screen saver begins, domain: com.apple.screensaver, key: askForPasswordDelay, type: int, value: 1 }
+    # - { name: Start screen saver after 5 minutes, host: currentHost, domain: com.apple.screensaver, key: idleTime, type: int, value: 300 }
     # Screenshots
     - { name: Save screenshots to the Downloads folder, domain: com.apple.screencapture, key: location, type: string, value: ~/Desktop }
     - { name: Save screenshots in PNG format, domain: com.apple.screencapture, key: type, type: string, value: png }
@@ -384,9 +452,11 @@ others:
     - { name: Disable auto mount for read write devices, domain: com.apple.frameworks.diskimages, key: auto-open-rw-root, type: bool, value: false }
     # Crash reporter
     - { name: Disable Crash Reporter, domain: com.apple.CrashReporter, key: DialogType, type: string, value: none }
+    # Firewall
+    - { name: Enable Firewall, domain: com.apple.security.firewall, key: EnableFirewall , type: bool, value: true }
 
   # Night Shift schedule
   nightshift:
     enabled: true
-    start_time: 18:00
+    start_time: 19:00
     end_time: 08:00

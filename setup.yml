@@ -10,9 +10,9 @@
     - { role: rosetta, when: ansible_machine == "arm64" and rosetta.enabled }
     - { role: git, when: git.enabled }
     - { role: zsh }
-    - { role: tmux }
+    # - { role: tmux }
     - { role: ssh, when: ssh.enabled }
-    - { role: vim }
+    # - { role: vim }
     - { role: iterm2 }
     - { role: vscodium }
     - { role: macos_settings }
