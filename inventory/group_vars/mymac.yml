@@ -9,7 +9,9 @@ hostname: Ganesha
 # Homebrew
 ##
 homebrew:
-  taps: []
+  taps: [
+    mongodb/brew
+  ]
 
   formulae:
     - ansible
@@ -36,6 +38,7 @@ homebrew:
     # - kubeseal
     - lsd
     - mamp
+    - mongodb-community
     - python
     - rbenv
     # - tfenv
@@ -173,7 +176,7 @@ vscodium:
 settings:
   defaults:
     # Set languages and locale
-    - { name: Set languages, key: AppleLanguages, type: array, value: ["en-US", "fr-FR"] }
+    - { name: Set languages, key: AppleLanguages, type: array, value: [ "fr-FR", "en-US"] }
     - { name: Set locale, key: AppleLocale, type: string, value: fr_FR }
     - { name: Set units 1/2, key: AppleMeasurementUnits, type: string, value: Centimeters }
     - { name: Set units 2/2, key: AppleMetricUnits, type: bool, value: true }
@@ -181,7 +184,7 @@ settings:
     - { name: Disable automatic capitalization, key: NSAutomaticCapitalizationEnabled, type: bool, value: false }
     - { name: Disable smart dashes, key: NSAutomaticDashSubstitutionEnabled, type: bool, value: false }
     - { name: Disable automatic period substitutions, key: NSAutomaticPeriodSubstitutionEnabled, type: bool, value: false }
-    - { name: Disable smart quotes, key: NSAutomaticQuoteSubstitutionEnabled, type: bool, value: false }
+    - { name: Enable smart quotes, key: NSAutomaticQuoteSubstitutionEnabled, type: bool, value: true }
     - { name: Disable auto-correct, key: NSAutomaticSpellingCorrectionEnabled, type: bool, value: false }
     # Set theme
     - { name: Set Dark mode, key: AppleInterfaceStyle, type: string, value: Dark }
