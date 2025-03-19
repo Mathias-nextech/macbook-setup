@@ -39,7 +39,9 @@ homebrew:
     - lsd
     - mamp
     - mongodb-community
+    - nvm
     - python
+    - postgresql@14
     - rbenv
     # - tfenv
     # - tflint
@@ -49,29 +51,28 @@ homebrew:
     - yarn
 
   casks:
-    - firefox
-    - postman
-    - transmit
+    - 1password
     - alfred
     - anydesk
-    - ganttproject
-    - 1password
-    - openvpn-connect
-    - datagrip
-    - malwarebytes
-    - textmate
     - cursor
-    - transmit
-    - istat-menus
-    - dropbox
-    - iterm2
-    - teamviewer
-    - rectangle
-    - sitesucker-pro
-    - podman-desktop
-    - anydesk
-    # - chrome
     - chromedriver
+    - datagrip
+    - dropbox
+    - firefox
+    - ganttproject
+    - istat-menus
+    - iterm2
+    - malwarebytes
+    - openvpn-connect
+    - podman-desktop
+    - postman
+    - rectangle
+    - sequel-ace
+    - sitesucker-pro
+    - transmit
+    - textmate
+    - transmit
+    - teamviewer
     - virtualbox@beta
     - vscodium
 
@@ -143,7 +144,7 @@ vscodium:
     - { name: "French Language Pack for Visual Studio Code", id: "ms-ceintl.vscode-language-pack-fr" }
     - { name: "Git Graph", id: "mhutchie.git-graph" }
     - { name: "GitHub Actions", id: "github.vscode-github-actions" }
-    # - { name: "GitHub Copilot", id: "github.copilot" }
+    - { name: "GitHub Copilot", id: "GitHub.copilot" }
     - { name: "GitLab Workflow", id: "gitlab.gitlab-workflow" }
     - { name: "GitLens", id: "eamodio.gitlens" }
     # - { name: "Haml Lint", id: "aki77.haml-lint" }
@@ -164,7 +165,6 @@ vscodium:
     - { name: "Ruby", id: "rebornix.ruby" }
     - { name: "Ruby LSP", id: "shopify.ruby-lsp" }
     # - { name: "Ruby in Rails", id: "hridoy.rails-snippets" }
-    # - { name: "Salty", id: "saltchang.salty" }
     - { name: "Sass (.sass only)", id: "syler.sass-indented" }
     - { name: "SCSS Everywhere", id: "gencer.html-slim-scss-css-class-completion" }
     - { name: "VSCode Ruby", id: "wingrunr21.vscode-ruby" }
